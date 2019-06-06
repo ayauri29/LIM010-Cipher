@@ -51,7 +51,34 @@ document.getElementById("cipher").addEventListener("click",function(){
   document.getElementById("resultado").innerHTML = cifrado;
 });
 
+document.getElementById("decipher").addEventListener("click",function(){
+  const palabra = document.getElementById("myTexto").value.toUpperCase();
+  const offset = parseInt(document.getElementById("offset").value);
+  //console.log(offset);
+  let cifrado = " ";
+  for(var i=0; i<palabra.length; i++){
+    let letra = palabra.charAt(i);
+    if(letra != " "){
+      let numLetra = palabra.charCodeAt(i);
+      let nueva = ecuacionDescifrado(numLetra,offset);
+      cifrado += String.fromCharCode(nueva);
+      console.log("offset" + offset);
+      console.log(numLetra);
+      console.log(nueva);
+      console.log(cifrado);
+    }else{
+      cifrado+=" ";
+    }
+  }
+  document.getElementById("resultado").innerHTML = cifrado;
+});
+
 function ecuacionCifrado(letra, numero)
 {
 	return (letra-65+numero)%26+65
+}
+
+function ecuacionDescifrado(letra, numero)
+{
+	return (letra-65-numero)%26+65
 }
