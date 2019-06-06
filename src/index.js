@@ -28,3 +28,30 @@ function ocultar(){
   document.getElementById("form").classList.add("hide");
   document.getElementById("resultado").classList.replace("hide","show");
 }
+
+document.getElementById("cipher").addEventListener("click",function(){
+  const palabra = document.getElementById("myTexto").value.toUpperCase();
+  const offset = parseInt(document.getElementById("offset").value);
+  //console.log(offset);
+  let cifrado = " ";
+  for(var i=0; i<palabra.length; i++){
+    let letra = palabra.charAt(i);
+    if(letra != " "){
+      let numLetra = palabra.charCodeAt(i);
+      let nueva = ecuacionCifrado(numLetra,offset);
+      cifrado += String.fromCharCode(nueva);
+      console.log("offset" + offset);
+      console.log(numLetra);
+      console.log(nueva);
+      console.log(cifrado);
+    }else{
+      cifrado+=" ";
+    }
+  }
+  document.getElementById("resultado").innerHTML = cifrado;
+});
+
+function ecuacionCifrado(letra, numero)
+{
+	return (letra-65+numero)%26+65
+}
