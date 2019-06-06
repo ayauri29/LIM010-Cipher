@@ -1,0 +1,86 @@
+input[type=number]::-webkit-outer-spin-button,
+
+input[type=number]::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+
+}
+
+.header {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 10px;
+  text-align: center;
+  background: #271f028a;
+  color: white;
+  font-size: 30px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("https://i.pinimg.com/originals/33/54/44/335444bd1755ef3af45630a378853421.jpg");
+  background-size: cover;
+  font-family: Tahoma, sans-serif;
+  height: 100%;
+}
+
+.form-area{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+}
+
+h3{
+  margin: 0;
+  padding: 0 0 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+.stylePassword{
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  outline-color: none;
+  height: 40px;
+  color: #ffffff;
+  display: 16px;
+}
+
+::placeholder{
+  color: #ffffff;
+}
+
+.styleStart{
+  border: none;
+  height: 40px;
+  outline: none;
+  color: #ffffff;
+  font-size: 15px;
+  background-color: #f4511e;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#incorrecto{
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
