@@ -2,17 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Love Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="cipher.js"></script>
+    <header>
+      <div class="header">
+        <h1>LoveCipher</h1>
+      </div>
+    </header>
+    <main>
+      <div id="form" class="form-area">
+      <input type="password" class="stylePassword" id="password" placeholder="Password" name="password">
+      <br>
+      <br>
+      <div id="incorrecto"></div>
+      <br>
+      <br>
+      <input type="button" class="styleStart" id="start" value="Empezar">
+    </div>
+      <br>
+      <br>
+      <center>
+        <textarea id="myTexto" class="hide"></textarea>
+        <input type="number" class="hide" id="offset">
+        <button type="button" class="hide" id="cipher">Cifrar</button>
+        <button type="button" class="hide" id="decipher">Descifrar</button>
+        <textarea id="resultado" class="hide" rows="4" cols="50" readonly></textarea>
+      </center>
     <script src="index.js"></script>
-
-    <input type="text" id="password" name="password">
-    <button type="button"
+    </main>
+    <footer></footer>
   </body>
 </html>
