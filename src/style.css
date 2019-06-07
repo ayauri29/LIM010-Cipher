@@ -20,9 +20,9 @@ input[type=number]::-webkit-inner-spin-button {
 body{
   margin: 0;
   padding: 0;
-  background-image: url("https://i.pinimg.com/originals/33/54/44/335444bd1755ef3af45630a378853421.jpg");
+  background-image: url(http://www.barraques.cat/imgdirs/big/93/939131_cute-love-wallpapers-hd.jpg);
   background-size: cover;
-  font-family: Tahoma, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   height: 100%;
 }
 
@@ -61,15 +61,14 @@ h3{
 }
 
 .styleStart{
-  border: none;
-  height: 40px;
-  outline: none;
+  border: 1px solid #e4685d;
   color: #ffffff;
-  font-size: 15px;
-  background-color: #f4511e;
+  font-size: 20px;
+  background-color:#e4685d;
   cursor: pointer;
-  border-radius: 20px;
   font-family: 'Source Sans Pro', sans-serif;
+  display:inline-block;
+  padding: 9px 50px;
 }
 
 #incorrecto{
@@ -83,4 +82,19 @@ h3{
 
 .show{
   display: block;
+}
+
+.styleTextArea{
+  border: 1px solid black;
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #c0926db8;
+  border-color: #de3a5c;
+  border-width: 5px;
+  border-style: dotted;
+
+}
+
+.styleButton{
+  display: inline-block;
 }
