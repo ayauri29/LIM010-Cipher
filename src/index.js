@@ -1,5 +1,9 @@
+const start = document.getElementById("start");
+const btnCipher = document.getElementById("btn-cipher");
+const btnDecipher = document.getElementById("btn-decipher");
 let intentos = 3;
-document.getElementById("start").addEventListener("click",function(){
+
+start.addEventListener("click", () =>{
 
   const pass=document.getElementById("password").value;
    if(pass=="LABORATORIA"){
@@ -18,67 +22,29 @@ document.getElementById("start").addEventListener("click",function(){
    }
 });
 
-function ocultar(){
+let   ocultar = () => {
   document.getElementById("password").classList.add("hide");
   document.getElementById("start").classList.add("hide");
   document.getElementById("myTexto").classList.replace("hide","show");
   document.getElementById("offset").classList.replace("hide","show");
-  document.getElementById("cipher").classList.replace("hide","show");
-  document.getElementById("decipher").classList.replace("hide","show");
+  document.getElementById("btn-cipher").classList.replace("hide","show");
+  document.getElementById("btn-decipher").classList.replace("hide","show");
   document.getElementById("form").classList.add("hide");
   document.getElementById("resultado").classList.replace("hide","show");
 }
 
-document.getElementById("cipher").addEventListener("click",function(){
-  const palabra = document.getElementById("myTexto").value.toUpperCase();
-  const offset = parseInt(document.getElementById("offset").value);
-  //console.log(offset);
-  let cifrado = " ";
-  for(var i=0; i<palabra.length; i++){
-    let letra = palabra.charAt(i);
-    if(letra != " "){
-      let numLetra = palabra.charCodeAt(i);
-      let nueva = ecuacionCifrado(numLetra,offset);
-      cifrado += String.fromCharCode(nueva);
-      console.log("offset" + offset);
-      console.log(numLetra);
-      console.log(nueva);
-      console.log(cifrado);
-    }else{
-      cifrado+=" ";
-    }
-  }
-  document.getElementById("resultado").innerHTML = cifrado;
+btnCipher.addEventListener("click",() => {
+  const texto = document.getElementById("myTexto").value;
+  const offet = parseInt(document.getElementById("offset").value);
+  const resultado = document.getElementById("resultado");
+    const cifrado = cipher.encode(offet,texto);
+  resultado.value = cifrado;
 });
 
-document.getElementById("decipher").addEventListener("click",function(){
-  const palabra = document.getElementById("myTexto").value.toUpperCase();
-  const offset = parseInt(document.getElementById("offset").value);
-  //console.log(offset);
-  let cifrado = " ";
-  for(var i=0; i<palabra.length; i++){
-    let letra = palabra.charAt(i);
-    if(letra != " "){
-      let numLetra = palabra.charCodeAt(i);
-      let nueva = ecuacionDescifrado(numLetra,offset);
-      cifrado += String.fromCharCode(nueva);
-      console.log("offset" + offset);
-      console.log(numLetra);
-      console.log(nueva);
-      console.log(cifrado);
-    }else{
-      cifrado+=" ";
-    }
-  }
-  document.getElementById("resultado").innerHTML = cifrado;
+btnDecipher.addEventListener("click",() => {
+  const texto = document.getElementById("myTexto");
+  const offet = document.getElementById("offset");
+  const resultado = document.getElementById("resultado");
+
+  resultado.value = cipher.decode(offet.value,texto.value);
 });
-
-function ecuacionCifrado(letra, numero)
-{
-	return (letra-65+numero)%26+65
-}
-
-function ecuacionDescifrado(letra, numero)
-{
-	return (letra-65-numero)%26+65
-}
