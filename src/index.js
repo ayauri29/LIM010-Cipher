@@ -1,6 +1,8 @@
 const start = document.getElementById("start");
 const btnCipher = document.getElementById("btn-cipher");
 const btnDecipher = document.getElementById("btn-decipher");
+const btnCopy = document.getElementById("btn-copy");
+const btnClean = document.getElementById("btn-clean")
 let intentos = 3;
 
 start.addEventListener("click", () =>{
@@ -25,12 +27,14 @@ start.addEventListener("click", () =>{
 let   ocultar = () => {
   document.getElementById("password").classList.add("hide");
   document.getElementById("start").classList.add("hide");
-  document.getElementById("myTexto").classList.replace("hide","show");
+  document.getElementById("myTexto").classList.replace("hide","showBlock");
   document.getElementById("offset").classList.replace("hide","show");
   document.getElementById("btn-cipher").classList.replace("hide","show");
   document.getElementById("btn-decipher").classList.replace("hide","show");
   document.getElementById("form").classList.add("hide");
-  document.getElementById("resultado").classList.replace("hide","show");
+  document.getElementById("resultado").classList.replace("hide","showBlock");
+  document.getElementById("btn-copy").classList.replace("hide","show");
+  document.getElementById("btn-clean").classList.replace("hide","show");
 }
 
 btnCipher.addEventListener("click",() => {
@@ -47,4 +51,15 @@ btnDecipher.addEventListener("click",() => {
   const resultado = document.getElementById("resultado");
 
   resultado.value = cipher.decode(offet.value,texto.value);
+});
+
+btnCopy.addEventListener("click", () => {
+  const copyText = document.getElementById("resultado");
+  copyText.select();
+  document.execCommand("copy");
+});
+
+btnClean.addEventListener("click", () => {
+  document.getElementById("myTexto").value = " ";
+  document.getElementById("resultado").value = " ";
 });

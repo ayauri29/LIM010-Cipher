@@ -81,6 +81,10 @@ h3{
 }
 
 .show{
+  display: inline;
+}
+
+.showBlock{
   display: block;
 }
 
@@ -96,5 +100,15 @@ h3{
 }
 
 .styleButton{
-  display: inline-block;
+  background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	cursor:pointer;
+	color:#666666;
+	font-family:Trebuchet MS;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 20px;
+  font-weight: bold;
+  margin: 20px;
 }
