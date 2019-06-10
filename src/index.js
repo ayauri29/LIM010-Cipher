@@ -14,12 +14,12 @@ start.addEventListener("click", () =>{
     if(intentos==0)
     {
      document.getElementById("password").value = "";
-     document.getElementById("incorrecto").innerHTML = "No te quedan mas intentos";
+     document.getElementById("incorrecto").innerHTML = "No te quedan más intentos.";
      document.getElementById("password").disabled = true;
     }else{
      intentos=intentos-1;
      document.getElementById("password").value = "";
-     document.getElementById("incorrecto").innerHTML = "Te quedan "+intentos + " intentos";
+     document.getElementById("incorrecto").innerHTML = "Te quedan "+intentos + " intentos.";
     }
    }
 });
@@ -35,22 +35,23 @@ let   ocultar = () => {
   document.getElementById("resultado").classList.replace("hide","showBlock");
   document.getElementById("btn-copy").classList.replace("hide","show");
   document.getElementById("btn-clean").classList.replace("hide","show");
+  document.getElementById("txtOffset").classList.replace("hide","show");
 }
 
 btnCipher.addEventListener("click",() => {
   const texto = document.getElementById("myTexto").value;
-  const offet = parseInt(document.getElementById("offset").value);
+  const offSet = parseInt(document.getElementById("offset").value);
   const resultado = document.getElementById("resultado");
-    const cifrado = cipher.encode(offet,texto);
+    const cifrado = cipher.encode(offSet,texto);
   resultado.value = cifrado;
 });
 
 btnDecipher.addEventListener("click",() => {
-  const texto = document.getElementById("myTexto");
-  const offet = document.getElementById("offset");
+  const texto = document.getElementById("myTexto").value.toUpperCase();
+  const offSet = parseInt(document.getElementById("offset").value);
   const resultado = document.getElementById("resultado");
-
-  resultado.value = cipher.decode(offet.value,texto.value);
+  const desCifrado = cipher.decode(offSet,texto);
+  resultado.value = desCifrado;
 });
 
 btnCopy.addEventListener("click", () => {
@@ -60,6 +61,7 @@ btnCopy.addEventListener("click", () => {
 });
 
 btnClean.addEventListener("click", () => {
-  document.getElementById("myTexto").value = " ";
-  document.getElementById("resultado").value = " ";
+  document.getElementById("myTexto").value = "";
+  document.getElementById("resultado").value = "";
+  document.getElementById("offset").value = "";
 });
