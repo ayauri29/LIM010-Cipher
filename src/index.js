@@ -42,7 +42,7 @@ btnCipher.addEventListener("click",() => {
   const texto = document.getElementById("myTexto").value;
   const offSet = parseInt(document.getElementById("offset").value);
   const resultado = document.getElementById("resultado");
-    const cifrado = cipher.encode(offSet,texto);
+  const cifrado = cipher.encode(offSet,texto);
   resultado.value = cifrado;
 });
 
