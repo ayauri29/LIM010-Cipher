@@ -7,7 +7,8 @@ window.cipher = {
         if(letra == letra.toUpperCase()){
           let numLetra = string.charCodeAt(i);
           cifrado += String.fromCharCode((numLetra-65+offset)%26+65);
-        }else if(letra == letra.toLowerCase()){
+        }
+        if(letra == letra.toLowerCase()){
           let numLetra = string.charCodeAt(i);
           cifrado += String.fromCharCode((numLetra-97+offset)%26+97);
         }
