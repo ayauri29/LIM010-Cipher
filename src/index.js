@@ -47,7 +47,7 @@ btnCipher.addEventListener("click",() => {
 });
 
 btnDecipher.addEventListener("click",() => {
-  const texto = document.getElementById("myTexto").value.toUpperCase();
+  const texto = document.getElementById("myTexto").value;
   const offSet = parseInt(document.getElementById("offset").value);
   const resultado = document.getElementById("resultado");
   const desCifrado = cipher.decode(offSet,texto);

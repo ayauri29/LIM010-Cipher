@@ -30,6 +30,9 @@ describe('cipher', () => {
       assert.equal(cipher.encode(3,"Hola Como Estas"),"Krod Frpr Hvwdv");
     });
 
+    it('debería retornar "01" para "90" con offset 1', () => {
+      assert.equal(cipher.encode(1,"90"),"01");
+    });
   });
 
   describe('cipher.decode', () => {
@@ -44,6 +47,16 @@ describe('cipher', () => {
 
     it('debería retornar "HOLA COMO ESTAS" para "KROD FRPR HVWDV" con offset 3', () => {
       assert.equal(cipher.decode(3,"KROD FRPR HVWDV"),"HOLA COMO ESTAS");
+    });
+
+    it('debería retornar "hola como estas" para "krod frpr hvwdv" con offset 3', () => {
+      assert.equal(cipher.decode(3,"krod frpr hvwdv"),"hola como estas");
+    });
+    it('debería retornar "ABCDEFGHIJKLMNOPQrstuvwxyz" para "HIJKLMNOPQRSTUVWXyzabcdefg" con offset 33', () => {
+      assert.equal(cipher.decode(33,"HIJKLMNOPQRSTUVWXyzabcdefg"),"ABCDEFGHIJKLMNOPQrstuvwxyz");
+    });
+    it('debería retornar "90" para "23" con offset 33', () => {
+      assert.equal(cipher.decode(33,"23"),"90");
     });
   });
 });
