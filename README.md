@@ -17,6 +17,20 @@ LoveCipher ayuda a los usuarios a cifrar mensajes dada una clave, a la vez el pr
 
 ## Imagen final del proyecto
 
+### Login
+
+![image](https://user-images.githubusercontent.com/33959688/59473975-76797800-8e0a-11e9-856f-bf1cf380f700.png)
+
+### Login incorrecto
+
+![image](https://user-images.githubusercontent.com/33959688/59474029-be989a80-8e0a-11e9-80a0-51855102a101.png)
+
+### Pantalla de cifrado y desCifrado
+
+![image](https://user-images.githubusercontent.com/33959688/59474063-e851c180-8e0a-11e9-8350-8f63f96d0169.png)
+
+
+
 ## Investigación UX
 
 ### Usuarios y objetivos en relación con el producto
