@@ -154,6 +154,7 @@ h2{
   align-items: baseline;
 }
 footer{
+  background-color: #fb6274;
   font-family: 'Fresca', sans-serif;
   position: fixed;
   bottom: 0px;
@@ -163,4 +164,8 @@ footer{
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
+}
+i{
+  margin-left: 10px;
 }
