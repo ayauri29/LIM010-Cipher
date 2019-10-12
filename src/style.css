@@ -155,9 +155,9 @@ h2{
 }
 footer{
   font-family: 'Fresca', sans-serif;
-  /* position: fixed; */
+  position: fixed;
   bottom: 0px;
-  /* height: 40px; */
+  height: 40px;
   color: white;
   /* margin-left: 45%; */
   display: flex;
