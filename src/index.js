@@ -25,17 +25,8 @@ start.addEventListener("click", () =>{
 });
 
 let   ocultar = () => {
-  document.getElementById("password").classList.add("hide");
-  document.getElementById("start").classList.add("hide");
-  document.getElementById("myTexto").classList.replace("hide","showBlock");
-  document.getElementById("offset").classList.replace("hide","show");
-  document.getElementById("btn-cipher").classList.replace("hide","show");
-  document.getElementById("btn-decipher").classList.replace("hide","show");
-  document.getElementById("form").classList.add("hide");
-  document.getElementById("resultado").classList.replace("hide","showBlock");
-  document.getElementById("btn-copy").classList.replace("hide","show");
-  document.getElementById("btn-clean").classList.replace("hide","show");
-  document.getElementById("txtOffset").classList.replace("hide","show");
+  document.getElementById('login').classList.add('hide');
+ document.getElementById('cifrado').classList.remove('hide');
 }
 
 btnCipher.addEventListener("click",() => {

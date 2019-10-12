@@ -1,44 +1,82 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Love Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fresca&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <div class="header">
-        <h1>LoveCipher</h1>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Love Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fresca&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>LoveCipher</h1>
+  </header>
+  <main>
+    <section id="login">
+      <div class="login">
+        <h2>Ingresa tu clave</h2>
+        <p id="incorrecto"></p>
+        <form>
+          <div class="divPass"><i class="em em-key"></i><input type="password" class="stylePassword" id="password"
+              placeholder="Password" name="password"></div>
+          <input type="button" class="styleStart" id="start" value="Empezar">
+        </form>
       </div>
-    </header>
-    <main>
-      <div id="form" class="form-area">
+    </section>
+    <!--  <header class="header">
+    <h1>LoveCipher</h1>
+  </header>
+  <main>
+    <form id="form" class="form-area">
+      <div>
         <h3>Ingresa tu clave</h3>
-        <div id="incorrecto"></div>
+        
         <div class="inputWithIcon">
           <input type="password" class="stylePassword" id="password" placeholder="Password" name="password">
           <i class="em em-key"></i>
         </div>
         <input type="button" class="styleStart" id="start" value="Empezar">
       </div>
-      <br>
-      <br>
-      <center>
-        <textarea title="Ingresa tu texto" id="myTexto" class="styleTextArea hide" rows="4" cols="50"></textarea>
-        <label id="txtOffset" class="styleLabel hide">CLAVE: </label>
-        <input title="Ingresa la clave de tu cifrado" type="number" min="0" class="styleOffset hide"  id="offset">
-        <button title="Cifrar texto" type="button" class="styleButton hide" id="btn-cipher">CIFRAR</button>
-        <button title="Descifrar texto" type="button" class="styleButton hide" id="btn-decipher">DESCIFRAR</button>
-        <textarea title="Aquí verás tu resultado" id="resultado" class="styleTextArea hide" rows="4" cols="50" readonly></textarea>
-        <button title="Copiar texto" type="button" class="styleButton hide" id="btn-copy">COPIAR</button>
-        <button title="Limpiar texto" type="button" class="styleButton hide" id="btn-clean">LIMPIAR</button>
-      </center>
-    <script src="index.js"></script>
-    <script src="cipher.js"></script>
-    </main>
-    <footer>@Realizado por Alba</footer>
-  </body>
+    </form> -->
+    <!--  <form id="screen-login" class="flex-form">
+        <img id="logo" alt="Logo de PokemonGO"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/1280px-Pok%C3%A9mon_GO_logo.svg.png" />
+        <label class="flex label">Usuario</label>
+        <input type="text" id="user" value="LABORATORIA" required />
+        <label class="flex label">Contraseña</label>
+        <input type="password" id="pass" value="LABORATORIA" required />
+        <label class="flex forgot-pass">¿Olvidaste tu contraseña?</label>
+        <input type="submit" id="ingresar" value="INGRESA" />
+        <label class="flex registro">¿No tienes una cuenta?&nbsp;<span class="bold">Registrate</span></label>
+        <p id="error-pass"></p>
+      </form> -->
+    <section id="cifrado" class="hide">
+      <div class="cifrado">
+        <textarea title="Ingresa tu texto" id="myTexto" class="styleTextArea" rows="4" cols="50"></textarea>
+        <div class="buttons">
+          <label id="txtOffset" class="styleLabel">CLAVE: </label>
+          <input title="Ingresa la clave de tu cifrado" type="number" min="0" class="styleOffset" id="offset">
+          <button title="Cifrar texto" type="button" class="styleButton" id="btn-cipher">CIFRAR</button>
+          <button title="Descifrar texto" type="button" class="styleButton" id="btn-decipher">DESCIFRAR</button>
+        </div>
+        <textarea title="Aquí verás tu resultado" id="resultado" class="styleTextArea" rows="4" cols="50"
+          readonly></textarea>
+        <div class="buttons">
+          <button title="Copiar texto" type="button" class="styleButton" id="btn-copy">COPIAR</button>
+          <button title="Limpiar texto" type="button" class="styleButton" id="btn-clean">LIMPIAR</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>@Realizado por Alba</footer>
+  <script src="index.js"></script>
+  <script src="cipher.js"></script>
+</body>
+
 </html>

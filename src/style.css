@@ -7,7 +7,25 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.header {
+html{
+  width: inherit;
+}
+body{
+  background: url('../img/fondo.jpg') no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-size: cover;
+}
+main{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+  /* margin-bottom: 62px; */
+}
+header{
   font-family: 'Fresca', sans-serif;
   padding: 10px;
   text-align: center;
@@ -15,28 +33,53 @@ input[type=number]::-webkit-inner-spin-button {
   color: white;
   font-size: 30px;
 }
-
-body{
-  margin: 0;
-  padding: 0;
-  background-image: url(http://www.barraques.cat/imgdirs/big/93/939131_cute-love-wallpapers-hd.jpg);
-  background-size: cover;
-  height: 100%;
+.login{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 260px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    padding: 40px;
 }
-
-.form-area{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 250px;
-  height: 260px;
-  box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
+.styleStart{
+  border: 1px solid #e4685d;
+  color: #ffffff;
+  font-size: 20px;
+  background-color:#e4685d;
+  cursor: pointer;
+  font-family: 'Fresca', sans-serif;
+  margin-top: 20px;
+  width: 194px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
 }
-
-h3{
+.stylePassword{
+    width: 150px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    height: 40px;
+    color: #ffffff;
+    outline: none;
+}
+.divPass {
+  display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+}
+::placeholder{
+  color: #ffffff;
+  font-family: 'Fresca', sans-serif;
+}
+h2{
   margin: 0;
   padding: 0 0 10px;
   font-weight: bold;
@@ -45,49 +88,6 @@ h3{
   font-family: 'Fresca', sans-serif;
   font-size: 25px;
 }
-
-
-.stylePassword{
-  padding-left: 40px;
-  width: 150px;
-  border: none;
-  border-bottom: 1px solid #ffffff;
-  background-color: transparent;
-  outline-color: none;
-  height: 40px;
-  color: #ffffff;
-  display: 16px;
-}
-
-.inputWithIcon{
-  position: relative;
-
-}
-
-.inputWithIcon i{
-  position: absolute;
-  left: 1px;
-  top: 5px;
-  bottom: 1px;
-  padding: 3px 3px;
-}
-::placeholder{
-  color: #ffffff;
-  font-family: 'Fresca', sans-serif;
-}
-
-.styleStart{
-  border: 1px solid #e4685d;
-  color: #ffffff;
-  font-size: 20px;
-  background-color:#e4685d;
-  cursor: pointer;
-  font-family: 'Fresca', sans-serif;
-  display:inline-block;
-  padding: 9px 50px;
-  margin-top: 20px;
-}
-
 #incorrecto{
   color: white;
   font-family: 'Fresca', sans-serif;
@@ -95,55 +95,50 @@ h3{
   margin-bottom: 20px;
   font-size: 16px;
 }
-
 .hide{
   display: none;
 }
 
-.show{
-  display: inline;
-}
-
-.showBlock{
-  display: block;
-}
-
 .styleTextArea{
   border: 1px solid black;
-  color: #666666;
+  color: #2b2a2a;
   font-family: 'Fresca', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   background-color: #fdfebbcc;
   border-color: #de3a5c;
   border-width: 5px;
   border-style: dotted;
-  width: 400px;
+  width: 80%;
   height: 100px;
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius:6px;
 }
-
-.styleLabel{
-    color: #666666;
-    font-family: 'Fresca', sans-serif;
-    font-size:  18px;
-    font-weight:bold;
-
+.cifrado{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
-
-.styleButton{
-  background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	cursor:pointer;
-	color:#666666;
+.styleLabel{
+  color: #ffffff;
   font-family: 'Fresca', sans-serif;
-	font-size:18px;
-	font-weight:bold;
-	padding:6px 20px;
+  font-size:  18px;
+  font-weight:bold;
+  margin-right: 10px;
+}
+.styleButton{
+  background-color: #fb6274;
+  border-radius:6px;
+  border: 1px solid #fc556c;
+  cursor:pointer;
+  color: #ffffff;
+  font-family: 'Fresca', sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  padding:6px 20px;
   font-weight: bold;
   margin: 0px 0px 10px 10px;
+  outline: none;
 }
 
 .styleOffset{
@@ -153,13 +148,108 @@ h3{
   color:#666666;
   font-size: 15px;
 }
-
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 footer{
   font-family: 'Fresca', sans-serif;
   position: fixed;
   bottom: 0px;
-  height: 40px;
+  /* height: 40px; */
   color: white;
-  margin-left: 45%;
-
+  /* margin-left: 45%; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
+  /* .header {
+    
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: url('http://s1.picswalls.com/wallpapers/2014/07/19/free-vintage-wallpaper_11190038_76.jpg');
+    background-size: cover;
+    height: 100%;
+  }
+  
+  .form-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 260px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+  }
+  
+  
+  
+  .stylePassword{
+    padding-left: 40px;
+    width: 150px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    outline-color: none;
+    height: 40px;
+    color: #ffffff;
+    display: 16px;
+  }
+  
+  .inputWithIcon{
+    position: relative;
+  
+  }
+  
+  .inputWithIcon i{
+    position: absolute;
+    left: 1px;
+    top: 5px;
+    bottom: 1px;
+    padding: 3px 3px;
+  }
+  ::placeholder{
+    color: #ffffff;
+    font-family: 'Fresca', sans-serif;
+  }
+  
+  .styleStart{
+    border: 1px solid #e4685d;
+    color: #ffffff;
+    font-size: 20px;
+    background-color:#e4685d;
+    cursor: pointer;
+    font-family: 'Fresca', sans-serif;
+    display:inline-block;
+    padding: 9px 50px;
+    margin-top: 20px;
+  }
+  
+  
+  
+  .hide{
+    display: none;
+  }
+  
+  .show{
+    display: inline;
+  }
+  
+  .showBlock{
+    display: block;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+} */
