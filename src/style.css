@@ -27,11 +27,11 @@ main{
 }
 header{
   font-family: 'Fresca', sans-serif;
-  padding: 10px;
+  /* padding: 10px; */
   text-align: center;
   background: #271f028a;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 }
 .login{
   display: flex;
@@ -155,7 +155,7 @@ h2{
 }
 footer{
   font-family: 'Fresca', sans-serif;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0px;
   /* height: 40px; */
   color: white;
